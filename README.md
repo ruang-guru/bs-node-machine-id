@@ -10,11 +10,7 @@ Binding of [node-machine-id](https://github.com/automation-stack/node-machine-id
 open Js.Promise;
 
 NodeMachineId.machineId()
-  |> then(id => id)
-
-/*
-  id will return string containing your unique machine, for example, c24b0fe51856497eebb6a2bfcd120247aac0d6334d670bb92e09a00ce8169365
-*/
+  |> then_(id => id)
 
 ```
 
@@ -22,11 +18,9 @@ NodeMachineId.machineId()
 
 ```ocaml
 let id = NodeMachineId.machineIdSync();
-
-/*
-id =        c24b0fe51856497eebb6a2bfcd120247aac0d6334d670bb92e09a00ce8169365
-*/
 ```
+
+Both will generate unique id for your machine. For example, `c24b0fe51856497eebb6a2bfcd120247aac0d6334d670bb92e09a00ce8169365`
 
 ## Installation
 
